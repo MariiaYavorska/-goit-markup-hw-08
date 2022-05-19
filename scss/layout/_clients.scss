@@ -1,0 +1,47 @@
+.clients {
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: -30px;
+    margin-left: -30px;
+  }
+  &__item {
+    flex-basis: calc((100% / 2 - 30px));
+    margin-top: 30px;
+    margin-left: 30px;
+  }
+
+  &__logo {
+    fill: currentColor;
+    transition: fill 250ms $timing-function;
+  }
+}
+
+.clients__link {
+  @include flexCenter();
+  background-position: center;
+  width: 100%;
+  height: 90px;
+  border: 1px solid $icon-color;
+  color: $icon-color;
+  border-radius: 4px;
+  transition: color 250ms $timing-function, border-color 250ms $timing-function;
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+    border-color: $accent-color;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .clients__item {
+    flex-basis: calc((100% / 3 - 30px));
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .clients__item {
+    flex-basis: calc((100% / 6 - 30px));
+  }
+}
