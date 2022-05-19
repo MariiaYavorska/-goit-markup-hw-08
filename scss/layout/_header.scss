@@ -1,0 +1,126 @@
+.header {
+  border-bottom: solid 1px $border-color;
+  position: relative;
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 767px) {
+  .navigation__list {
+    display: none;
+  }
+  .contacts {
+    display: none;
+  }
+}
+@media screen and (min-width: 768px) {
+  .header__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .navigation {
+    display: flex;
+    align-items: baseline;
+
+    &__list {
+      display: flex;
+      margin-left: 88px;
+    }
+
+    &__item:not(:last-child) {
+      margin-right: 50px;
+
+      &:hover,
+      &:focus {
+        color: $accent-color;
+      }
+    }
+  }
+
+  .contacts {
+    margin-left: auto;
+
+    &__link {
+      display: flex;
+      padding: 5px;
+      align-items: center;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 1.14;
+      letter-spacing: 0.02em;
+      color: $text-color-grey;
+      transition: color 250ms $timing-function;
+
+      &:hover,
+      &:focus {
+        color: $accent-color;
+      }
+    }
+
+    &__icon {
+      margin-right: 8px;
+      fill: currentColor;
+    }
+  }
+
+  .navigation__link {
+    display: inline-block;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    color: $text-color-black;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    transition: color 250ms $timing-function;
+
+    &:hover,
+    &:focus {
+      color: $accent-color;
+    }
+
+    &--current {
+      color: $accent-color;
+      position: relative;
+    }
+
+    &--current::after {
+      position: absolute;
+      display: block;
+      bottom: -1px;
+      left: 0;
+      content: '';
+      width: 100%;
+      background: $accent-color;
+      border-radius: 2px;
+      height: 4px;
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .contacts {
+    display: flex;
+    align-items: center;
+
+    &__list:not(:last-child) {
+      margin-bottom: 0;
+      margin-right: 30px;
+    }
+
+    &__link {
+      color: $text-color-grey;
+      font-size: 14px;
+      line-height: 1.14;
+      padding-top: 32px;
+      padding-bottom: 32px;
+    }
+  }
+}
+
