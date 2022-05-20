@@ -52,6 +52,10 @@
   &:focus {
     color: $accent-color;
   }
+  &--current {
+color: $accent-color;
+
+  }
 }
 
 .mobile-contacts {
@@ -67,7 +71,7 @@
   &__tel {
     font-weight: 500;
     font-size: 34px;
-    line-height: 1.17;
+    line-height: 1.18;
     letter-spacing: 0.02em;
     color: $accent-color;
   }
@@ -95,7 +99,7 @@
 
     &:not(:last-child):after {
       display: block;
-      content: ' ';
+      content: " ";
       position: absolute;
       width: 1px;
       top: 0;
@@ -140,21 +144,6 @@
   &:hover,
   &:focus {
     fill: $accent-color;
-  }
-}
-
-@media screen and (max-width: 425px) {
-  .mobile-menu {
-    padding-left: 15px;
-    padding-right: 15px;
-  }
-
-  .mobile-contact__tel {
-    font-size: 32px;
-  }
-
-  .mobile-social__item {
-    font-size: 14px;
   }
 }
 
