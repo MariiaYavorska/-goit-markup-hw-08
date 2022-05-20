@@ -43,7 +43,7 @@
     margin-bottom: 30px;
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: $tablet) {
   .team {
     &__list {
       display: flex;
@@ -60,7 +60,7 @@
   }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: $desktop) {
   .team {
     &__item {
       flex-basis: calc(100% / 4 - 30px);
