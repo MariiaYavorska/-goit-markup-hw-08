@@ -27,12 +27,11 @@
     text-align: center;
     text-transform: uppercase;
     color: $text-color-white;
-    margin: auto;
+    margin: 0 auto 30px;;
   }
 
   &__button {
     @extend %button;
-    margin-top: 0;
     padding: 10px 32px;
     display: inline-block;
   }
