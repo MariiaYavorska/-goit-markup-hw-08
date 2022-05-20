@@ -1,9 +1,17 @@
 .title {
   margin-top: 0;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   font-weight: 700;
-  font-size: 36px;
-  line-height: 1.17;
+  font-size: 28px;
+  line-height: 1.18;
   text-align: center;
   color: $text-color-black;
+}
+
+@media screen and (min-width: $desktop) {
+  .title {
+    font-size: 36px;
+    line-height: 1.17;
+  }
+  
 }
