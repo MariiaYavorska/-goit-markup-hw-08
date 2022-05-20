@@ -126,7 +126,7 @@
   }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: $desktop) {
   .form__terms,
   .form__agreement-terms {
     font-size: 14px;
