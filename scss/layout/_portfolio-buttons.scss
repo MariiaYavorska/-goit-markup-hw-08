@@ -23,6 +23,10 @@
     border: none;
     transition: color 250ms $timing-function, background-color 250ms $timing-function, box-shadow 250ms $timing-function;
 
+    &--current {
+      background-color: $accent-color;
+      color: $text-color-white;
+    }
     &:hover,
     &:focus {
       background-color: $accent-color;
